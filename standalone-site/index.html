@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СЛЕD — Официальный Сайт Рок-Группы</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- COMMON HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-block">
+        <svg class="logo-flame" viewBox="0 0 24 24">
+          <path d="M12 2c-.07 0-.13.02-.2.03C11 2.13 5 8.16 5 12c0 3.84 3.16 7 7 7s7-3.16 7-7c0-3.84-6-9.87-6.8-9.97c-.07-.01-.13-.03-.2-.03zm0 15c-2.76 0-5-2.24-5-5c0-1.8 1.9-4.88 5-7.61c3.1 2.73 5 5.81 5 7.61c0 2.76-2.24 5-5 5z"/>
+        </svg>
+        <div class="logo-text">СЛЕ<span>D</span></div>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active" data-t="navHome">Главная</a>
+        <a href="about.html" class="nav-link" data-t="navAbout">О группе</a>
+        <a href="discography.html" class="nav-link" data-t="navDiscography">Дискография</a>
+        <a href="media.html" class="nav-link" data-t="navMedia">Медиа</a>
+        <a href="concerts.html" class="nav-link" data-t="navConcerts">Концерты</a>
+        <a href="contacts.html" class="nav-link" data-t="navContacts">Контакты</a>
+      </nav>
+      
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">Ru</button>
+          <button class="lang-btn" data-lang="by">By</button>
+          <button class="lang-btn" data-lang="en">En</button>
+        </div>
+        
+        <button class="burger-btn" id="burger-open">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER SIDEBAR -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="logo-text" style="font-size: 20px;">СЛЕ<span>D</span></div>
+      <button class="burger-btn" id="burger-close" style="font-size: 20px;">✕</button>
+    </div>
+    <div class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link active" data-t="navHome">Главная</a>
+      <a href="about.html" class="mobile-nav-link" data-t="navAbout">О группе</a>
+      <a href="discography.html" class="mobile-nav-link" data-t="navDiscography">Дискография</a>
+      <a href="media.html" class="mobile-nav-link" data-t="navMedia">Медиа</a>
+      <a href="concerts.html" class="mobile-nav-link" data-t="navConcerts">Концерты</a>
+      <a href="contacts.html" class="mobile-nav-link" data-t="navContacts">Контакты</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-vignette"></div>
+    
+    <div class="hero-content">
+      <div class="blood-line-vert"></div>
+      <div class="hero-sub" data-t="heroSubtitle">МИНСКАЯ ХОРРОР-ПАНК-РОК ГРУППА</div>
+      <h1 class="hero-head" data-t="heroHeadline">ОСТАВЬ СВОЙ <span>СЛЕD</span> В ВЕЧНОСТИ</h1>
+      <p class="hero-text" data-t="heroText">Музыка, сочетающая драйв панк-металла с атмосферой мистики. Каждая песня — законченная история, вдохновленная классикой киноужасов и таинственными легендами.</p>
+      
+      <div class="hero-ctas">
+        <a href="discography.html" class="btn btn-primary" data-t="heroListenBtn">Слушать релизы</a>
+        <a href="about.html" class="btn btn-secondary" data-t="heroMoreBtn">О группе</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAND TEASER SEGMENT -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="teaser-grid">
+        
+        <div class="teaser-image-frame">
+          <div class="teaser-image"></div>
+          <div class="teaser-stamp">SINCE 2019</div>
+        </div>
+
+        <div class="teaser-content">
+          <span class="section-tag">WHO WE ARE</span>
+          <h2 class="teaser-title" data-t="aboutTeaserTitle">Смертельно драйвовый рок из Минска</h2>
+          <div style="width: 40px; height: 1.5px; background-color: var(--color-brand);"></div>
+          <p class="teaser-text" data-t="aboutTeaserText">Основанная в 2019 году в Минске, группа СЛЕD исполняет авторский хоррор-панк с использованием классической скрипки, сочных гитарных риффов и глубокого вокала.</p>
+          
+          <div class="stats-row">
+            <div>
+              <div class="stats-num">2019</div>
+              <div class="stats-label" @translate="yearFounded">Год основания</div>
+            </div>
+            <div>
+              <div class="stats-num">15<span>+</span></div>
+              <div class="stats-label" @translate="tracksLabel">Композиций</div>
+            </div>
+            <div>
+              <div class="stats-num">100<span>%</span></div>
+              <div class="stats-label" @translate="liveEnergy">Энергия</div>
+            </div>
+          </div>
+
+          <a href="about.html" class="teaser-link" data-t="aboutTeaserReadMore">Читать подробную биографию ⟶</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT RELEASE PROMO BANNER -->
+  <section class="section" style="background: radial-gradient(circle at center, #180505 0%, #060606 100%);">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <span class="section-tag">LATEST RELIC</span>
+      <h2 class="brand-font" style="font-size: 28px; margin-bottom: 8px;" data-t="latestReleaseTitle">Свежий шрам — Альбом «След»</h2>
+      <p style="font-size: 11px; color: var(--color-brand); font-family: var(--font-sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;" data-t="latestReleaseYear">Релиз 2026 года</p>
+      
+      <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+        <a href="discography.html" class="btn btn-primary" data-t="listenPlatformBtn">Слушать на платформах</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMON FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-text" style="font-size: 22px; margin-bottom: 20px;">СЛЕ<span>D</span></div>
+          <p data-t="aboutTeaserText" style="font-size: 11px; line-height: 1.6;">Основанная в 2019 году в Минске, группа СЛЕD исполняет авторский хоррор-панк с использованием классической скрипки, сочных гитарных риффов и глубокого вокала.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="navAbout">О группе</h4>
+          <ul class="footer-list">
+            <li><a href="about.html" data-t="navAbout">История</a></li>
+            <li><a href="about.html" data-t="bandMembersTitle">Состав</a></li>
+            <li><a href="about.html" data-t="factsTitle">Тайны</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="navDiscography">Дискография</h4>
+          <ul class="footer-list">
+            <li><a href="discography.html" data-t="albumProklyatyTitle">Альбом «Проклятый»</a></li>
+            <li><a href="discography.html" data-t="albumSledTitle">Альбом «След»</a></li>
+            <li><a href="discography.html" data-t="discoSingles">Синглы</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="followUs">Мы в соцсетях</h4>
+          <div class="socials-grid-foot">
+            <a href="https://vk.com/sled.rockband" target="_blank" class="soc-btn-foot vk-hover">VK</a>
+            <a href="https://www.instagram.com/sled.rockband" target="_blank" class="soc-btn-foot inst-hover">Instagram</a>
+            <a href="https://www.tiktok.com/@sledrockband" target="_blank" class="soc-btn-foot tt-hover">TikTok</a>
+            <a href="https://www.youtube.com/@sled.rockband" target="_blank" class="soc-btn-foot yt-hover">YouTube</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bot">
+        <div>© 2019-<span id="copy-year">2026</span> СЛЕD Rock Band. Minsk, Belarus. All Rights Reserved.</div>
+        <div style="font-size: 10px; color: var(--color-text-dim);">Designed with raw horror essence.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT INCLUDES -->
+  <script src="js/translations.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

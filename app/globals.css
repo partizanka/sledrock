@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --color-brand: #c41e1e;
+  --color-brand-glow: rgba(196, 30, 30, 0.45);
+}
+
+body {
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  background-color: #060606;
+  color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-sans {
+  font-family: var(--font-oswald), sans-serif;
+}
+
+/* Custom Goth Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060606;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 3px;
+  border: 1px solid #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c41e1e;
+  box-shadow: 0 0 5px #c41e1e;
+}
+
+/* Glowing text shadow macro */
+.text-shadow-glow {
+  text-shadow: 0 0 10px var(--color-brand);
+}
+
+/* Vignette border framing overlay */
+.vignette-ambient {
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.95);
+}

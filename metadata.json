@@ -1,0 +1,6 @@
+{
+  "name": "Рок-группа СЛЕD",
+  "description": "Сайт-визитка белорусской хоррор-панк-рок группы СЛЕD (Минск). Биография, состав, дискография, медиа-галерея и контакты.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

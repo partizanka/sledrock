@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дискография СЛЕD — Слушать Патологические Треки</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- COMMON HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-block">
+        <svg class="logo-flame" viewBox="0 0 24 24">
+          <path d="M12 2c-.07 0-.13.02-.2.03C11 2.13 5 8.16 5 12c0 3.84 3.16 7 7 7s7-3.16 7-7c0-3.84-6-9.87-6.8-9.97c-.07-.01-.13-.03-.2-.03zm0 15c-2.76 0-5-2.24-5-5c0-1.8 1.9-4.88 5-7.61c3.1 2.73 5 5.81 5 7.61c0 2.76-2.24 5-5 5z"/>
+        </svg>
+        <div class="logo-text">СЛЕ<span>D</span></div>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" data-t="navHome">Главная</a>
+        <a href="about.html" class="nav-link" data-t="navAbout">О группе</a>
+        <a href="discography.html" class="nav-link active" data-t="navNavTitle" data-t="navDiscography">Дискография</a>
+        <a href="media.html" class="nav-link" data-t="navMedia">Медиа</a>
+        <a href="concerts.html" class="nav-link" data-t="navConcerts">Концерты</a>
+        <a href="contacts.html" class="nav-link" data-t="navContacts">Контакты</a>
+      </nav>
+      
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">Ru</button>
+          <button class="lang-btn" data-lang="by">By</button>
+          <button class="lang-btn" data-lang="en">En</button>
+        </div>
+        
+        <button class="burger-btn" id="burger-open">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER SIDEBAR -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="logo-text" style="font-size: 20px;">СЛЕ<span>D</span></div>
+      <button class="burger-btn" id="burger-close" style="font-size: 20px;">✕</button>
+    </div>
+    <div class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link" data-t="navHome">Главная</a>
+      <a href="about.html" class="mobile-nav-link" data-t="navAbout">О группе</a>
+      <a href="discography.html" class="mobile-nav-link active" data-t="navDiscography">Дискография</a>
+      <a href="media.html" class="mobile-nav-link" data-t="navMedia">Медиа</a>
+      <a href="concerts.html" class="mobile-nav-link" data-t="navConcerts">Концерты</a>
+      <a href="contacts.html" class="mobile-nav-link" data-t="navContacts">Контакты</a>
+    </div>
+  </div>
+
+  <!-- TITLE HEADER -->
+  <section class="section" style="padding-top: 150px; padding-bottom: 50px; background: linear-gradient(to bottom, #180505 0%, #060606 100%);">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag" style="letter-spacing: 0.3em;">RELEASES</span>
+      <h1 class="section-title" style="font-size: 42px;" data-t="discoTitle">Дискография</h1>
+      <div class="section-line"></div>
+    </div>
+  </section>
+
+  <!-- DISCOGRAPHY LAYOUT WITH PLAYER STICKY -->
+  <section class="section">
+    <div class="container">
+      <div class="disco-layout">
+        
+        <!-- LEFT: GOTH AUDIO PLAYER -->
+        <div class="sticky-player-box">
+          <div class="audio-player">
+            <!-- Rivet Details -->
+            <div class="player-rivet rivet-tl"></div>
+            <div class="player-rivet rivet-tr"></div>
+            <div class="player-rivet rivet-bl"></div>
+            <div class="player-rivet rivet-br"></div>
+
+            <div class="player-header">
+              <div class="player-meta-row">
+                <span class="player-small-tag" data-t="playerTitle">Склеп звуков — Аудиоплеер</span>
+                <div class="player-status-wrap">
+                  <span class="player-status-text" data-t="playerNowPlaying">СЕЙЧАС ЗВУЧИТ</span>
+                  <div class="player-status-light" id="player-status-light"></div>
+                </div>
+              </div>
+
+              <div class="player-track-scroll">
+                <div class="player-track-title" id="player-track-title">Человек с 1000 лиц</div>
+                <div class="player-track-album" id="player-track-album">Альбом — Проклятый</div>
+              </div>
+
+              <!-- Animated Waveform -->
+              <canvas class="player-waveform-canvas" id="player-waveform" width="300" height="32"></canvas>
+            </div>
+
+            <div class="player-controls-area">
+              <!-- Slider Seek -->
+              <input type="range" class="player-seek-slider" id="player-seek-slider" min="0" max="100" value="0">
+              <div class="player-duration-row">
+                <span id="player-time-current">0:00</span>
+                <span id="player-time-total">3:42</span>
+              </div>
+
+              <div class="player-buttons-panel">
+                <!-- Volume Controls -->
+                <div class="player-vol-wrap">
+                  <span class="player-vol-icon" id="player-vol-icon">🔊</span>
+                  <input type="range" class="player-vol-slider" id="player-vol-slider" min="0" max="100" value="70">
+                </div>
+
+                <!-- Control elements -->
+                <div class="player-main-center-btns">
+                  <button class="player-btn-circle" id="player-prev-btn">⏮</button>
+                  <button class="player-btn-play-trigger" id="player-play-btn">
+                    <span id="player-play-icon">
+                      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </span>
+                  </button>
+                  <button class="player-btn-circle" id="player-next-btn">⏭</button>
+                </div>
+                
+                <!-- Placeholder dummy icon -->
+                <div style="width: 80px; text-align: right; color: var(--color-brand); font-family: var(--font-display); font-size: 8px; letter-spacing: 0.1em;">ANALOG SYNTH</div>
+              </div>
+
+              <!-- Tracklist Panel -->
+              <div class="player-tracklist-panel">
+                <div class="player-list-title" id="player-list-title" data-t="playerTracklist">Список композиций</div>
+                <div class="player-list-scroll" id="player-list-scroll">
+                  <!-- Javascript dynamic items -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: RELEASES CARDS LIST -->
+        <div class="albums-wrapper">
+          
+          <h2 class="brand-font" style="font-size: 20px; color: var(--color-brand); border-bottom: 1px solid #161616; padding-bottom: 8px;" data-t="discoAlbums">Альбомы</h2>
+
+          <!-- Album 2026: След -->
+          <div class="album-listing-card">
+            <div class="album-listing-header">
+              <div class="album-meta-head">
+                <div class="album-cover-placeholder">💿</div>
+                <div class="album-title-block">
+                  <h3 data-t="albumSledTitle">Альбом «След» (2026)</h3>
+                  <span>8 ТРЕКОВ • ACTIVE RELEASE</span>
+                </div>
+              </div>
+              <a href="https://links.freshtunes.com/JfQJI" target="_blank" class="btn btn-primary" style="padding: 10px 18px; font-size: 10px;" data-t="listenPlatformBtn">Слушать</a>
+            </div>
+
+            <div class="album-track-list-grid">
+              <button class="album-track-btn" onclick="document.querySelectorAll('.player-list-item')[5].click()">
+                <span>01. След</span> <span style="font-size: 10px; opacity: 0.6;">4:12</span>
+              </button>
+              <button class="album-track-btn" onclick="document.querySelectorAll('.player-list-item')[6].click()">
+                <span>02. Забытый приют</span> <span style="font-size: 10px; opacity: 0.6;">3:55</span>
+              </button>
+              <button class="album-track-btn" onclick="document.querySelectorAll('.player-list-item')[7].click()">
+                <span>03. Мрак</span> <span style="font-size: 10px; opacity: 0.6;">3:24</span>
+              </button>
+              <button class="album-track-btn" onclick="document.querySelectorAll('.player-list-item')[7].click()">
+                <span>04. Демоны ночи</span> <span style="font-size: 10px; opacity: 0.6;">3:10</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Album 2025: Проклятый -->
+          <div class="album-listing-card">
+            <div class="album-listing-header">
+              <div class="album-meta-head">
+                <div class="album-cover-placeholder">💀</div>
+                <div class="album-title-block">
+                  <h3 data-t="albumProklyatyTitle">Альбом «Проклятый» (2025)</h3>
+                  <span>15 ТРЕКОВ • STUDIO PORTRAIT</span>
+                </div>
+              </div>
+              <a href="https://links.freshtunes.com/JfQJI" target="_blank" class="btn btn-primary" style="padding: 10px 18px; font-size: 10px;" data-t="listenPlatformBtn">Слушать</a>
+            </div>
+
+            <div class="album-track-list-grid">
+              <button class="album-track-btn" onclick="document.querySelectorAll('.player-list-item')[0].click()">
+                <span>01. Человек с 1000 лиц</span> <span style="font-size: 10px; opacity: 0.6;">3:42</span>
+              </button>
+              <button class="album-track-btn" onclick="document.querySelectorAll('.player-list-item')[1].click()">
+                <span>02. Призрак</span> <span style="font-size: 10px; opacity: 0.6;">4:05</span>
+              </button>
+              <button class="album-track-btn" onclick="document.querySelectorAll('.player-list-item')[2].click()">
+                <span>03. Девочка-вампир</span> <span style="font-size: 10px; opacity: 0.6;">3:18</span>
+              </button>
+              <button class="album-track-btn" onclick="document.querySelectorAll('.player-list-item')[3].click()">
+                <span>04. Мессия</span> <span style="font-size: 10px; opacity: 0.6;">3:50</span>
+              </button>
+              <button class="album-track-btn" onclick="document.querySelectorAll('.player-list-item')[4].click()">
+                <span>05. Новогодняя</span> <span style="font-size: 10px; opacity: 0.6;">3:30</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- SINGLES -->
+          <h2 class="brand-font" style="font-size: 20px; color: var(--color-brand); border-bottom: 1px solid #161616; padding-bottom: 8px; margin-top: 20px;" data-t="discoSingles">Синглы</h2>
+          
+          <div class="singles-row">
+            <!-- Single 1 -->
+            <div class="single-card">
+              <div>
+                <div class="single-art">🦇</div>
+                <h4 class="single-title">Девочка-вампир</h4>
+                <div class="single-year">STREAM SINGLE • 2024</div>
+              </div>
+              <a href="https://links.freshtunes.com/wGDXE" target="_blank" class="teaser-link" style="margin-top: 15px; font-size: 10px;" data-t="listenPlatformBtn">Слушать</a>
+            </div>
+
+            <!-- Single 2 -->
+            <div class="single-card">
+              <div>
+                <div class="single-art">🎄</div>
+                <h4 class="single-title">Новогодняя</h4>
+                <div class="single-year">STREAM SINGLE • 2024</div>
+              </div>
+              <a href="https://links.freshtunes.com/nACdg" target="_blank" class="teaser-link" style="margin-top: 15px; font-size: 10px;" data-t="listenPlatformBtn">Слушать</a>
+            </div>
+
+            <!-- Single 3 -->
+            <div class="single-card">
+              <div>
+                <div class="single-art">🔔</div>
+                <h4 class="single-title">Мессия</h4>
+                <div class="single-year">STREAM SINGLE • 2024</div>
+              </div>
+              <a href="https://links.freshtunes.com/ZsQdU" target="_blank" class="teaser-link" style="margin-top: 15px; font-size: 10px;" data-t="listenPlatformBtn">Слушать</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMON FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-text" style="font-size: 22px; margin-bottom: 20px;">СЛЕ<span>D</span></div>
+          <p data-t="aboutTeaserText" style="font-size: 11px; line-height: 1.6;">Основанная в 2019 году в Минске, группа СЛЕD исполняет авторский хоррор-панк с использованием классической скрипки, сочных гитарных риффов и глубокого вокала.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="navAbout">О группе</h4>
+          <ul class="footer-list">
+            <li><a href="about.html" data-t="navAbout">История</a></li>
+            <li><a href="about.html" data-t="bandMembersTitle">Состав</a></li>
+            <li><a href="about.html" data-t="factsTitle">Тайны</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="navDiscography">Дискография</h4>
+          <ul class="footer-list">
+            <li><a href="discography.html" data-t="albumProklyatyTitle">Альбом «Проклятый»</a></li>
+            <li><a href="discography.html" data-t="albumSledTitle">Альбом «След»</a></li>
+            <li><a href="discography.html" data-t="discoSingles">Синглы</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="followUs">Мы в соцсетях</h4>
+          <div class="socials-grid-foot">
+            <a href="https://vk.com/sled.rockband" target="_blank" class="soc-btn-foot vk-hover">VK</a>
+            <a href="https://www.instagram.com/sled.rockband" target="_blank" class="soc-btn-foot inst-hover">Instagram</a>
+            <a href="https://www.tiktok.com/@sledrockband" target="_blank" class="soc-btn-foot tt-hover">TikTok</a>
+            <a href="https://www.youtube.com/@sled.rockband" target="_blank" class="soc-btn-foot yt-hover">YouTube</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bot">
+        <div>© 2019-2026 СЛЕD Rock Band. Minsk, Belarus. All Rights Reserved.</div>
+        <div style="font-size: 10px; color: var(--color-text-dim);">Designed with raw horror essence.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT INCLUDES -->
+  <script src="js/translations.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

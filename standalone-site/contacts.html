@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты СЛЕD — Букинг и Связь</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- COMMON HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-block">
+        <svg class="logo-flame" viewBox="0 0 24 24">
+          <path d="M12 2c-.07 0-.13.02-.2.03C11 2.13 5 8.16 5 12c0 3.84 3.16 7 7 7s7-3.16 7-7c0-3.84-6-9.87-6.8-9.97c-.07-.01-.13-.03-.2-.03zm0 15c-2.76 0-5-2.24-5-5c0-1.8 1.9-4.88 5-7.61c3.1 2.73 5 5.81 5 7.61c0 2.76-2.24 5-5 5z"/>
+        </svg>
+        <div class="logo-text">СЛЕ<span>D</span></div>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" data-t="navHome">Главная</a>
+        <a href="about.html" class="nav-link" data-t="navAbout">О группе</a>
+        <a href="discography.html" class="nav-link" data-t="navDiscography">Дискография</a>
+        <a href="media.html" class="nav-link" data-t="navMedia">Медиа</a>
+        <a href="concerts.html" class="nav-link" data-t="navConcerts">Концерты</a>
+        <a href="contacts.html" class="nav-link active" data-t="navContacts">Контакты</a>
+      </nav>
+      
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">Ru</button>
+          <button class="lang-btn" data-lang="by">By</button>
+          <button class="lang-btn" data-lang="en">En</button>
+        </div>
+        
+        <button class="burger-btn" id="burger-open">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER SIDEBAR -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="logo-text" style="font-size: 20px;">СЛЕ<span>D</span></div>
+      <button class="burger-btn" id="burger-close" style="font-size: 20px;">✕</button>
+    </div>
+    <div class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link">Главная</a>
+      <a href="about.html" class="mobile-nav-link">О группе</a>
+      <a href="discography.html" class="mobile-nav-link">Дискография</a>
+      <a href="media.html" class="mobile-nav-link">Медиа</a>
+      <a href="concerts.html" class="mobile-nav-link">Концерты</a>
+      <a href="contacts.html" class="mobile-nav-link active">Контакты</a>
+    </div>
+  </div>
+
+  <!-- TITLE HEADER -->
+  <section class="section" style="padding-top: 150px; padding-bottom: 50px; background: linear-gradient(to bottom, #180505 0%, #060606 100%);">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag" style="letter-spacing: 0.3em;">SUMMONING PORTAL</span>
+      <h1 class="section-title" style="font-size: 42px;" data-t="contactsTitle">Связаться с нами</h1>
+      <p style="font-size: 13px; color: var(--color-text-dim); font-family: var(--font-sans); margin-top: 10px;" data-t="contactsSubtitle">Организация концертов, букинг, пресса или просто письмо из тьмы</p>
+      <div class="section-line"></div>
+    </div>
+  </section>
+
+  <!-- CORE CONTACTS BODY -->
+  <section class="section">
+    <div class="container">
+      <div class="contacts-grid">
+        
+        <!-- LEFT: INFOS -->
+        <div class="contact-info-panel">
+          <div class="contact-info-title-row">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+            <h3 class="brand-font" data-t="bookingTitle">Букинг и Концерты</h3>
+          </div>
+          
+          <p class="contact-info-text" data-t="bookingText">По вопросам организации выступлений, участия в фестивалях, корпоративных мероприятиях или интервью пишите напрямую нашему концертному директору.</p>
+          
+          <div class="contact-row">
+            <div class="contact-icon-frame">✉</div>
+            <div>
+              <div class="contact-label-small" data-t="bookingEmail">Почта для связи:</div>
+              <a href="mailto:sled.rockband@gmail.com" class="contact-value-link">sled.rockband@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon-frame">📍</div>
+            <div>
+              <div class="contact-label-small">ЛОКАЦИЯ • BASE</div>
+              <span class="contact-value-link" style="font-weight: normal; cursor: default;">Минск, Беларусь • Minsk, Belarus</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: BOOKING FORMS -->
+        <div class="booking-form-card">
+          <h3 class="brand-font">Отправить запрос</h3>
+
+          <form id="booking-message-form">
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-lbl" for="name-input"><span data-t="formName">Ваше Имя</span> <span>*</span></label>
+                <input class="form-ctrl" type="text" id="name-input" placeholder="Введите имя">
+              </div>
+
+              <div class="form-group">
+                <label class="form-lbl" for="email-input"><span data-t="formEmail">Электронная почта</span> <span>*</span></label>
+                <input class="form-ctrl" type="email" id="email-input" placeholder="email@example.com">
+              </div>
+            </div>
+
+            <div class="form-group form-group-single">
+              <label class="form-lbl" id="subject-label" for="subject-input"><span data-t="formSubject">Тема сообщения</span> <span>*</span></label>
+              <input class="form-ctrl" type="text" id="subject-input" placeholder="Тема письма">
+            </div>
+
+            <div class="form-group form-group-single">
+              <label class="form-lbl" id="message-label" for="message-input"><span data-t="formMessage">Текст сообщения</span> <span>*</span></label>
+              <textarea class="form-ctrl" id="message-input" rows="5" placeholder="Напишите ваши мысли..." style="resize: none;"></textarea>
+            </div>
+
+            <!-- Error banner (JS toggled) -->
+            <div class="err-banner" id="form-validation-banner" style="display: none;">
+              ❌ <span data-t="formValidationErr">Пожалуйста, заполните все обязательные поля корректно.</span>
+            </div>
+
+            <!-- Success banner (JS toggled) -->
+            <div class="success-banner" id="form-success-banner" style="display: none;">
+              <span>✅</span>
+              <span data-t="formSuccessMessage">Ваше послание успешно отправлено сквозь тьму! Мы свяжемся с вами в ближайшее время.</span>
+            </div>
+
+            <!-- Submit trigger button -->
+            <button class="btn btn-primary" type="submit" id="submit-message-btn" style="width: 100%; border-radius: 4px;" data-t="formSubmitBtn">Отправить послание</button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMON FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-text" style="font-size: 22px; margin-bottom: 20px;">СЛЕ<span>D</span></div>
+          <p data-t="aboutTeaserText" style="font-size: 11px; line-height: 1.6;">Основанная в 2019 году в Минске, группа СЛЕD исполняет авторский хоррор-панк с использованием классической скрипки, сочных гитарных риффов и глубокого вокала.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="navAbout">О группе</h4>
+          <ul class="footer-list">
+            <li><a href="about.html" data-t="navAbout">История</a></li>
+            <li><a href="about.html" data-t="bandMembersTitle">Состав</a></li>
+            <li><a href="about.html" data-t="factsTitle">Тайны</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="navDiscography">Дискография</h4>
+          <ul class="footer-list">
+            <li><a href="discography.html" data-t="albumProklyatyTitle">Альбом «Проклятый»</a></li>
+            <li><a href="discography.html" data-t="albumSledTitle">Альбом «След»</a></li>
+            <li><a href="discography.html" data-t="discoSingles">Синглы</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="followUs">Мы в соцсетях</h4>
+          <div class="socials-grid-foot">
+            <a href="https://vk.com/sled.rockband" target="_blank" class="soc-btn-foot vk-hover">VK</a>
+            <a href="https://www.instagram.com/sled.rockband" target="_blank" class="soc-btn-foot inst-hover">Instagram</a>
+            <a href="https://www.tiktok.com/@sledrockband" target="_blank" class="soc-btn-foot tt-hover">TikTok</a>
+            <a href="https://www.youtube.com/@sled.rockband" target="_blank" class="soc-btn-foot yt-hover">YouTube</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bot">
+        <div>© 2019-2026 СЛЕD Rock Band. Minsk, Belarus. All Rights Reserved.</div>
+        <div style="font-size: 10px; color: var(--color-text-dim);">Designed with raw horror essence.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT INCLUDES -->
+  <script src="js/translations.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

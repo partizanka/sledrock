@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О группе СЛЕD — Биография и Состав</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- COMMON HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-block">
+        <svg class="logo-flame" viewBox="0 0 24 24">
+          <path d="M12 2c-.07 0-.13.02-.2.03C11 2.13 5 8.16 5 12c0 3.84 3.16 7 7 7s7-3.16 7-7c0-3.84-6-9.87-6.8-9.97c-.07-.01-.13-.03-.2-.03zm0 15c-2.76 0-5-2.24-5-5c0-1.8 1.9-4.88 5-7.61c3.1 2.73 5 5.81 5 7.61c0 2.76-2.24 5-5 5z"/>
+        </svg>
+        <div class="logo-text">СЛЕ<span>D</span></div>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" data-t="navHome">Главная</a>
+        <a href="about.html" class="nav-link active" data-t="navAbout">О группе</a>
+        <a href="discography.html" class="nav-link" data-t="navDiscography">Дискография</a>
+        <a href="media.html" class="nav-link" data-t="navMedia">Медиа</a>
+        <a href="concerts.html" class="nav-link" data-t="navConcerts">Концерты</a>
+        <a href="contacts.html" class="nav-link" data-t="navContacts">Контакты</a>
+      </nav>
+      
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">Ru</button>
+          <button class="lang-btn" data-lang="by">By</button>
+          <button class="lang-btn" data-lang="en">En</button>
+        </div>
+        
+        <button class="burger-btn" id="burger-open">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER SIDEBAR -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="logo-text" style="font-size: 20px;">СЛЕ<span>D</span></div>
+      <button class="burger-btn" id="burger-close" style="font-size: 20px;">✕</button>
+    </div>
+    <div class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link" data-t="navHome">Главная</a>
+      <a href="about.html" class="mobile-nav-link active" data-t="navAbout">О группе</a>
+      <a href="discography.html" class="mobile-nav-link" data-t="navDiscography">Дискография</a>
+      <a href="media.html" class="mobile-nav-link" data-t="navMedia">Медиа</a>
+      <a href="concerts.html" class="mobile-nav-link" data-t="navConcerts">Концерты</a>
+      <a href="contacts.html" class="mobile-nav-link" data-t="navContacts">Контакты</a>
+    </div>
+  </div>
+
+  <!-- MAIN COVER HEADER BANNER -->
+  <section class="section" style="padding-top: 150px; padding-bottom: 50px; background: linear-gradient(to bottom, #180505 0%, #060606 100%);">
+    <div class="container" style="text-align: center;">
+      <span class="section-tag" style="letter-spacing: 0.3em;">BIOGRAPHY</span>
+      <h1 class="section-title" style="font-size: 42px;" data-t="aboutTitle">История группы</h1>
+      <div class="section-line"></div>
+    </div>
+  </section>
+
+  <!-- BIO CORE TEXTS -->
+  <section class="section">
+    <div class="container">
+      <div class="bio-grid">
+        
+        <div class="quote-box">
+          <span class="quote-icon">❝</span>
+          <h3 class="brand-font quote-title">СЛЕD — Минск</h3>
+          <p class="quote-text" data-t="heroText">Музыка, которая сочетает в себе драйв панк-металла и леденящую кровь атмосферу мистических историй, древних легенд и классических хоррор-кинолент.</p>
+          <span style="font-size: 9px; font-family: var(--font-sans); text-transform: uppercase; color: var(--color-brand); font-weight: 700;">EST. 2019 • BELARUS</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <h2 class="brand-font" style="font-size: 22px; color: #fff;" data-t="aboutBioTitle">Кто мы такие?</h2>
+          <p style="font-size: 14px; color: var(--color-text-muted); line-height: 1.6;" data-t="aboutBioText1"></p>
+          <p style="font-size: 14px; color: var(--color-text-muted); line-height: 1.6;" data-t="aboutBioText2"></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERS GRID LINEUP -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">THE REAPERS</span>
+        <h2 class="section-title" data-t="bandMembersTitle">Действующий состав</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="members-grid">
+        
+        <!-- Vocals -->
+        <div class="member-card">
+          <div class="member-photo-frame">
+            <span class="member-index">01</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+            <div class="member-photo" style="background-image: url('https://picsum.photos/seed/yuri/300/400');"></div>
+          </div>
+          <div class="member-info">
+            <h4 class="member-name">Юрий Леонов</h4>
+            <span class="member-role" data-t="memberRoleVocals">Вокал</span>
+          </div>
+        </div>
+
+        <!-- Guitars -->
+        <div class="member-card">
+          <div class="member-photo-frame">
+            <span class="member-index">02</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 17.5 3 6V3h3l11.5 11.5Z"/><path d="m13 19 6-6"/><path d="m16 22 4-4"/><circle cx="19" cy="5" r="2"/></svg>
+            <div class="member-photo" style="background-image: url('https://picsum.photos/seed/alex/300/400');"></div>
+          </div>
+          <div class="member-info">
+            <h4 class="member-name">Александр Дробязко</h4>
+            <span class="member-role" data-t="memberRoleGuitars">Гитара / Соло-гитара</span>
+          </div>
+        </div>
+
+        <!-- Bass -->
+        <div class="member-card">
+          <div class="member-photo-frame">
+            <span class="member-index">03</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13.5 10.5 3 21v-3l7.5-7.5Z"/><line x1="14" y1="10" x2="20" y2="4"/><circle cx="21" cy="3" r="1"/></svg>
+            <div class="member-photo" style="background-image: url('https://picsum.photos/seed/vitaliy/300/400');"></div>
+          </div>
+          <div class="member-info">
+            <h4 class="member-name">Виталий Сарока</h4>
+            <span class="member-role" data-t="memberRoleBass">Бас-гитара</span>
+          </div>
+        </div>
+
+        <!-- Drums -->
+        <div class="member-card">
+          <div class="member-photo-frame">
+            <span class="member-index">04</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
+            <div class="member-photo" style="background-image: url('https://picsum.photos/seed/oleg/300/400');"></div>
+          </div>
+          <div class="member-info">
+            <h4 class="member-name">Олег Лозовой</h4>
+            <span class="member-role" data-t="memberRoleDrums">Ударные</span>
+          </div>
+        </div>
+
+        <!-- Violin -->
+        <div class="member-card">
+          <div class="member-photo-frame">
+            <span class="member-index">05</span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22a8 8 0 0 0 8-8c0-5.5-4.5-10-8-10S4 8.5 4 14a8 8 0 0 0 8 8Z"/><circle cx="12" cy="14" r="2"/></svg>
+            <div class="member-photo" style="background-image: url('https://picsum.photos/seed/tatiana/300/400');"></div>
+          </div>
+          <div class="member-info">
+            <h4 class="member-name">Татьяна Асиевская</h4>
+            <span class="member-role" data-t="memberRoleViolin">Скрипка</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">UNVEILED MYSTERIES</span>
+        <h2 class="section-title" data-t="factsTitle">Темные тайны группы</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="facts-grid">
+        <div class="fact-card">
+          <div class="fact-num">I</div>
+          <h4 class="brand-font fact-title" data-t="navTitle">СЛЕD</h4>
+          <p class="fact-text" data-t="fact1"></p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-num">II</div>
+          <h4 class="brand-font fact-title" data-t="memberRoleVocals">Вокал</h4>
+          <p class="fact-text" data-t="fact2"></p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-num">III</div>
+          <h4 class="brand-font fact-title" data-t="latestReleaseTitle">Синглы</h4>
+          <p class="fact-text" data-t="fact3"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MILESTONES & ACHIEVEMENTS -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GLORIOUS CHRONICLES</span>
+        <h2 class="section-title" data-t="achievementsTitle">Наши достижения</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="achievements-list">
+        
+        <div class="ach-item">
+          <div class="ach-icon-box">🏆</div>
+          <div>
+            <span class="ach-title-stamp">RADIO STOLITSA</span>
+            <p class="ach-text" data-t="ach1"></p>
+          </div>
+        </div>
+
+        <div class="ach-item">
+          <div class="ach-icon-box">⭐</div>
+          <div>
+            <span class="ach-title-stamp">ONEROCK RADIO</span>
+            <p class="ach-text" data-t="ach2"></p>
+          </div>
+        </div>
+
+        <div class="ach-item">
+          <div class="ach-icon-box">🤘</div>
+          <div>
+            <span class="ach-title-stamp">FEST CHAMPIONS</span>
+            <p class="ach-text" data-t="ach4"></p>
+          </div>
+        </div>
+
+        <div class="ach-item">
+          <div class="ach-icon-box">💿</div>
+          <div>
+            <span class="ach-title-stamp">STUDIO LOGS</span>
+            <p class="ach-text" data-t="ach6"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMON FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-text" style="font-size: 22px; margin-bottom: 20px;">СЛЕ<span>D</span></div>
+          <p data-t="aboutTeaserText" style="font-size: 11px; line-height: 1.6;">Основанная в 2019 году в Минске, группа СЛЕD исполняет авторский хоррор-панк с использованием классической скрипки, сочных гитарных риффов и глубокого вокала.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="navAbout">О группе</h4>
+          <ul class="footer-list">
+            <li><a href="about.html" data-t="navAbout">История</a></li>
+            <li><a href="about.html" data-t="bandMembersTitle">Состав</a></li>
+            <li><a href="about.html" data-t="factsTitle">Тайны</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="navDiscography">Дискография</h4>
+          <ul class="footer-list">
+            <li><a href="discography.html" data-t="albumProklyatyTitle">Альбом «Проклятый»</a></li>
+            <li><a href="discography.html" data-t="albumSledTitle">Альбом «След»</a></li>
+            <li><a href="discography.html" data-t="discoSingles">Синглы</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-t="followUs">Мы в соцсетях</h4>
+          <div class="socials-grid-foot">
+            <a href="https://vk.com/sled.rockband" target="_blank" class="soc-btn-foot vk-hover">VK</a>
+            <a href="https://www.instagram.com/sled.rockband" target="_blank" class="soc-btn-foot inst-hover">Instagram</a>
+            <a href="https://www.tiktok.com/@sledrockband" target="_blank" class="soc-btn-foot tt-hover">TikTok</a>
+            <a href="https://www.youtube.com/@sled.rockband" target="_blank" class="soc-btn-foot yt-hover">YouTube</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bot">
+        <div>© 2019-2026 СЛЕD Rock Band. Minsk, Belarus. All Rights Reserved.</div>
+        <div style="font-size: 10px; color: var(--color-text-dim);">Designed with raw horror essence.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT INCLUDES -->
+  <script src="js/translations.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
