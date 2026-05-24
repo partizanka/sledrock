@@ -1,4 +1,4 @@
-name: Deploy to hb.by
+name: Deploy Next.js to hb.by
 
 on:
   push:
@@ -10,11 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Клонируем репозиторий
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Заливаем файлы на хостинг hb.by по FTP
+      # Устанавливаем Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # или '18', смотря какая у тебя
+
+      # Устанавливаем зависимости
+      - name: Install dependencies
+        run: npm install
+
+      # Собираем статический сайт
+      - name: Build project
+        run: npm run build
+
+      # Заливаем только папку 'out' на хостинг
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -22,8 +35,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          server-dir: /public_html/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/README.md
+          local-dir: ./out/ # Отправляем только готовую сборку
+          server-dir: /sledrock.by/
+          # Очищаем папку перед загрузкой, чтобы не было старых файлов
+          dangerous-clean-slate: true 
