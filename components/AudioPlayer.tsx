@@ -10,40 +10,43 @@ interface Track {
   titleEn: string;
   album: 'proklyaty' | 'sled' | 'singles';
   duration: string;
+  src: string;
 }
 
 const ALL_TRACKS: Track[] = [
-  // След (2026)
-  { titleRu: "След", titleBy: "След", titleEn: "SLED (The Trace)", album: "sled", duration: "3:42" },
-  { titleRu: "Ловец снов", titleBy: "Лавец сноў", titleEn: "Dreamcatcher", album: "sled", duration: "4:15" },
-  { titleRu: "Пиратская история", titleBy: "Пірацкая гісторыя", titleEn: "Pirate Tale", album: "sled", duration: "3:58" },
-  { titleRu: "Бой", titleBy: "Бой", titleEn: "The Fight", album: "sled", duration: "3:20" },
-  { titleRu: "Смотритель маяка", titleBy: "Даглядчык маяка", titleEn: "Lighthouse Keeper", album: "sled", duration: "4:50" },
-  { titleRu: "Беглецы", titleBy: "Уцекачы", titleEn: "The Fugitives", album: "sled", duration: "3:12" },
-  { titleRu: "Грустный клоун", titleBy: "Смутны клоўн", titleEn: "Sad Clown", album: "sled", duration: "3:35" },
-  { titleRu: "Реквием о любви", titleBy: "Реквіем аб каханні", titleEn: "Requiem of Love", album: "sled", duration: "4:41" },
-
   // Проклятый (2025)
-  { titleRu: "Человек с 1000 лиц", titleBy: "Чалавек з 1000 твараў", titleEn: "Man with 1000 Faces", album: "proklyaty", duration: "4:05" },
-  { titleRu: "Призрак", titleBy: "Прывід", titleEn: "Ghost", album: "proklyaty", duration: "3:40" },
-  { titleRu: "Дуллахан", titleBy: "Дулахан", titleEn: "Dullahan", album: "proklyaty", duration: "3:52" },
-  { titleRu: "Кейн", titleBy: "Кейн", titleEn: "Kaine", album: "proklyaty", duration: "4:12" },
-  { titleRu: "Фокусник", titleBy: "Фокуснік", titleEn: "The Illusionist", album: "proklyaty", duration: "3:28" },
-  { titleRu: "Мессия", titleBy: "Месія", titleEn: "Messiah", album: "proklyaty", duration: "4:24" },
-  { titleRu: "Проклятый", titleBy: "Пракляты", titleEn: "The Damned", album: "proklyaty", duration: "3:50" },
-  { titleRu: "Ведьмак", titleBy: "Ведзьмар", titleEn: "The Witcher", album: "proklyaty", duration: "3:45" },
-  { titleRu: "Сирены", titleBy: "Сірэны", titleEn: "Sirens", album: "proklyaty", duration: "4:08" },
-  { titleRu: "Портрет", titleBy: "Партрэт", titleEn: "The Portrait", album: "proklyaty", duration: "3:33" },
-  { titleRu: "Впусти меня", titleBy: "Упусці мяне", titleEn: "Let Me In", album: "proklyaty", duration: "4:01" },
-  { titleRu: "Оборотень", titleBy: "Ваўкалак", titleEn: "Werewolf", album: "proklyaty", duration: "3:55" },
-  { titleRu: "Кукольник", titleBy: "Лялечнік", titleEn: "The Puppeteer", album: "proklyaty", duration: "4:19" },
-  { titleRu: "Брат за брата", titleBy: "Брат за брата", titleEn: "Brother for Brother", album: "proklyaty", duration: "3:30" },
-  { titleRu: "Поцелуй вампира", titleBy: "Пацалунак вампіра", titleEn: "Vampire's Kiss", album: "proklyaty", duration: "5:02" },
+  { titleRu: "Человек с 1000 лиц", titleBy: "Чалавек з 1000 твараў", titleEn: "Man of 1000 Faces", album: "proklyaty", duration: "6:11", src: "/music/proklyaty/chelovek-s-1000-lic.mp3" },
+  { titleRu: "Призрак", titleBy: "Прывід", titleEn: "The Ghost", album: "proklyaty", duration: "3:42", src: "/music/proklyaty/prizrak.mp3" },
+  { titleRu: "Дуллахан", titleBy: "Дулахан", titleEn: "Dullahan", album: "proklyaty", duration: "4:24", src: "/music/proklyaty/dullahan.mp3" },
+  { titleRu: "Кейн", titleBy: "Кейн", titleEn: "Cain", album: "proklyaty", duration: "3:24", src: "/music/proklyaty/keyn.mp3" },
+  { titleRu: "Фокусник", titleBy: "Фокуснік", titleEn: "The Magician", album: "proklyaty", duration: "2:46", src: "/music/proklyaty/fokusnik.mp3" },
+  { titleRu: "Мессия", titleBy: "Месія", titleEn: "Messiah", album: "proklyaty", duration: "6:03", src: "/music/proklyaty/messiya.mp3" },
+  { titleRu: "Проклятый", titleBy: "Пракляты", titleEn: "The Cursed", album: "proklyaty", duration: "3:57", src: "/music/proklyaty/proklyaty.mp3" },
+  { titleRu: "Ведьмак", titleBy: "Ведзьмак", titleEn: "The Witcher", album: "proklyaty", duration: "3:06", src: "/music/proklyaty/vedmak.mp3" },
+  { titleRu: "Сирены", titleBy: "Сірэны", titleEn: "Sirens", album: "proklyaty", duration: "4:41", src: "/music/proklyaty/sireny.mp3" },
+  { titleRu: "Портрет", titleBy: "Партрэт", titleEn: "The Portrait", album: "proklyaty", duration: "3:34", src: "/music/proklyaty/portret.mp3" },
+  { titleRu: "Впусти меня", titleBy: "Упусці мяне", titleEn: "Let Me In", album: "proklyaty", duration: "4:35", src: "/music/proklyaty/vpusti-menya.mp3" },
+  { titleRu: "Оборотень", titleBy: "Пярэварацень", titleEn: "The Werewolf", album: "proklyaty", duration: "3:30", src: "/music/proklyaty/oboroten.mp3" },
+  { titleRu: "Кукольник", titleBy: "Лялечнік", titleEn: "The Puppeteer", album: "proklyaty", duration: "3:31", src: "/music/proklyaty/kukolnik.mp3" },
+  { titleRu: "Брат за брата", titleBy: "Брат за брата", titleEn: "Brother for Brother", album: "proklyaty", duration: "3:38", src: "/music/proklyaty/brat-za-brata.mp3" },
+  { titleRu: "Поцелуй вампира", titleBy: "Пацалунак вампіра", titleEn: "Vampire's Kiss", album: "proklyaty", duration: "3:10", src: "/music/proklyaty/poceluy-vampira.mp3" },
+
+  // След (2026)
+  { titleRu: "Интро", titleBy: "Інтра", titleEn: "Intro", album: "sled", duration: "1:15", src: "/music/sled/intro.mp3" },
+  { titleRu: "След", titleBy: "След", titleEn: "SLED (The Trace)", album: "sled", duration: "2:38", src: "/music/sled/sled.mp3" },
+  { titleRu: "Ловец снов", titleBy: "Лавец сноў", titleEn: "Dreamcatcher", album: "sled", duration: "3:20", src: "/music/sled/lovec-snov.mp3" },
+  { titleRu: "Пиратская история", titleBy: "Пірацкая гісторыя", titleEn: "Pirate Tale", album: "sled", duration: "5:34", src: "/music/sled/piratskaya-istoriya.mp3" },
+  { titleRu: "Бой", titleBy: "Бой", titleEn: "The Fight", album: "sled", duration: "5:06", src: "/music/sled/boy.mp3" },
+  { titleRu: "Смотритель маяка", titleBy: "Даглядчык маяка", titleEn: "Lighthouse Keeper", album: "sled", duration: "5:04", src: "/music/sled/smotritel-mayaka.mp3" },
+  { titleRu: "Беглецы", titleBy: "Уцекачы", titleEn: "The Fugitives", album: "sled", duration: "4:07", src: "/music/sled/beglecy.mp3" },
+  { titleRu: "Грустный клоун", titleBy: "Смутны клоўн", titleEn: "Sad Clown", album: "sled", duration: "5:48", src: "/music/sled/grustnyy-kloun.mp3" },
+  { titleRu: "Реквием о любви", titleBy: "Рэквіем пра каханне", titleEn: "Requiem for Love", album: "sled", duration: "4:50", src: "/music/sled/rekviem-o-lyubvi.mp3" },
+  { titleRu: "Аутро", titleBy: "Аўтра", titleEn: "Outro", album: "sled", duration: "2:50", src: "/music/sled/autro.mp3" },
 
   // Синглы
-  { titleRu: "Девочка-вампир", titleBy: "Дзяўчынка-вампір", titleEn: "Vampire Girl", album: "singles", duration: "3:15" },
-  { titleRu: "Новогодняя", titleBy: "Навагодняя", titleEn: "New Year's Ominous", album: "singles", duration: "3:08" },
-  { titleRu: "Мессия (Сингл)", titleBy: "Месія (Сінгл)", titleEn: "Messiah (Single)", album: "singles", duration: "4:24" }
+  { titleRu: "Новогодняя", titleBy: "Навагодняя", titleEn: "New Year's Song", album: "singles", duration: "2:16", src: "/music/singles/novogodnyaya.mp3" },
+  { titleRu: "Мессия (Сингл)", titleBy: "Месія (Сінгл)", titleEn: "Messiah (Single)", album: "singles", duration: "6:13", src: "/music/singles/messiya.mp3" },
+  { titleRu: "Бой", titleBy: "Бой", titleEn: "The Fight", album: "singles", duration: "5:06", src: "/music/singles/boy.mp3" }
 ];
 
 export default function AudioPlayer({ selectedAlbumId }: { selectedAlbumId?: 'proklyaty' | 'sled' | 'singles' }) {
