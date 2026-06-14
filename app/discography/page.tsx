@@ -141,11 +141,10 @@ function DiscographyContent() {
                       {/* Header block with cover & distribution links */}
                       <div className="p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-stone-900 gap-6">
                         <div className="flex items-center space-x-5">
-                          {/* Styled Cover Art Placeholder */}
-                          <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${album.coverColor} border border-red-950/40 rounded flex flex-col items-center justify-center text-center p-2 relative flex-shrink-0`}>
-                            <Skull className="w-5.5 h-5.5 text-[#c41e1e] opacity-75 animate-pulse" />
-                            <span className="font-mono text-[6px] text-stone-500 uppercase tracking-widest mt-1">S_COVER</span>
-                          </div>
+                           {/* Album Cover */}
+                           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded overflow-hidden border border-red-950/40 flex-shrink-0">
+                             <img src={album.cover} alt={t[album.titleKey]} className="w-full h-full object-cover" />
+                           </div>
                           
                           <div>
                             <span className="font-mono text-[9px] text-[#c41e1e] font-bold tracking-widest uppercase block">
@@ -221,11 +220,10 @@ function DiscographyContent() {
                           className="bg-[#0b0b0b] border border-stone-900 rounded-lg p-5 flex flex-col justify-between hover:border-red-950/60 transition-all duration-300 relative group"
                         >
                           <div className="space-y-4">
-                            {/* Artwork Placeholder */}
-                            <div className={`aspect-square w-full rounded bg-gradient-to-br ${single.coverColor} border border-stone-800 p-4 flex flex-col items-center justify-center relative`}>
-                              <Music className="w-8 h-8 text-stone-700 group-hover:text-[#c41e1e] group-hover:scale-110 transition-all duration-500" />
-                              <span className="font-mono text-[7px] text-stone-600 tracking-widest absolute bottom-2 uppercase">S_SINGLE</span>
-                            </div>
+                             {/* Single Cover */}
+                             <div className="aspect-square w-full rounded overflow-hidden border border-stone-800">
+                               <img src={single.cover} alt={titleStr} className="w-full h-full object-cover" />
+                             </div>
 
                             <div>
                               <span className="font-mono text-[8px] text-[#c41e1e] uppercase tracking-widest font-bold block">

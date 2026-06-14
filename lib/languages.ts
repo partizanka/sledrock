@@ -409,6 +409,7 @@ export const ALBUMLIST = [
     year: "2025",
     songsCount: 15,
     coverColor: "from-red-950 to-black",
+    cover: "/images/discography/cover-proklyaty.webp",
     link: "https://links.freshtunes.com/JfQJI",
     tracks: [
       "Человек с 1000 лиц",
@@ -468,6 +469,7 @@ export const ALBUMLIST = [
     year: "2026",
     songsCount: 8,
     coverColor: "from-stone-900 to-red-950",
+    cover: "/images/discography/cover-sled.webp",
     link: "https://links.freshtunes.com/JfQJI", // defaults to freshtunes link
     tracks: [
       "След",
@@ -504,25 +506,28 @@ export const ALBUMLIST = [
 
 export const SINGLELIST = [
   {
-    id: "devochka-vampir",
-    title: { ru: "Девочка-вампир", by: "Дзяўчынка-вампір", en: "Vampire Girl" },
-    year: "2024",
-    link: "https://links.freshtunes.com/wGDXE",
-    coverColor: "from-purple-950 to-black"
+    id: "boy",
+    title: { ru: "Бой", by: "Бой", en: "The Fight" },
+    year: "2026",
+    link: "https://band.link/IPvQb",
+    coverColor: "from-red-950 to-black",
+    cover: "/images/discography/cover-boy.webp"
   },
   {
     id: "novogodnyaya",
     title: { ru: "Новогодняя", by: "Навагодняя", en: "New Year's Ominous" },
     year: "2024",
     link: "https://links.freshtunes.com/nACdg",
-    coverColor: "from-emerald-950 to-black"
+    coverColor: "from-emerald-950 to-black",
+    cover: "/images/discography/cover-novogodnyaya.webp"
   },
   {
     id: "messiah-single",
-    title: { ru: "Мессия (Сингл)", by: "Месія (Сінгл)", en: "Messiah (Single)" },
-    year: "2024",
+    title: { ru: "Мессия", by: "Месія", en: "Messiah" },
+    year: "2025",
     link: "https://links.freshtunes.com/ZsQdU",
-    coverColor: "from-red-900 to-black"
+    coverColor: "from-red-900 to-black",
+    cover: "/images/discography/cover-messiya.webp"
   }
 ];
 

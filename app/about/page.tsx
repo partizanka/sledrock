@@ -10,16 +10,17 @@ import { Skull, Flame, Star, Quote, Award } from 'lucide-react';
 
 interface Member {
   name: string;
-  instrumentKey: 'memberRoleVocals' | 'memberRoleGuitars' | 'memberRoleBass' | 'memberRoleDrums' | 'memberRoleViolin';
+  instrumentKey: 'memberRoleGuitars' | 'memberRoleBass' | 'memberRoleVocals' | 'memberRoleDrums' | 'memberRoleViolin';
   id: string;
+  photo: string;
 }
 
 const MEMBERS: Member[] = [
-  { name: "Юрий Леонов", instrumentKey: "memberRoleVocals", id: "vocals" },
-  { name: "Александр Дробязко", instrumentKey: "memberRoleGuitars", id: "guitar" },
-  { name: "Виталий Сарока", instrumentKey: "memberRoleBass", id: "bass" },
-  { name: "Олег Лозовой", instrumentKey: "memberRoleDrums", id: "drums" },
-  { name: "Татьяна Асиевская-Ахламенок", instrumentKey: "memberRoleViolin", id: "violin" }
+  { name: "Александр Дробязко", instrumentKey: "memberRoleGuitars", id: "guitar", photo: "/images/band/members/drobyazko.webp" },
+  { name: "Виталий Сарока", instrumentKey: "memberRoleBass", id: "bass", photo: "/images/band/members/saroka.webp" },
+  { name: "Юрий Леонов", instrumentKey: "memberRoleVocals", id: "vocals", photo: "/images/band/members/leonov.webp" },
+  { name: "Олег Лозовой", instrumentKey: "memberRoleDrums", id: "drums", photo: "/images/band/members/lozovoy.webp" },
+  { name: "Татьяна Асиевская-Ахламенок", instrumentKey: "memberRoleViolin", id: "violin", photo: "/images/band/members/ahlamenok.webp" }
 ];
 
 function AboutContent() {
@@ -141,31 +142,34 @@ function AboutContent() {
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 className="bg-[#0b0b0b] border border-stone-900 rounded-lg overflow-hidden shadow-lg hover:border-red-950/60 transition-all duration-300 group"
               >
-                {/* Image Placeholder */}
-                <div className="relative aspect-[3/4] w-full bg-[#121212] overflow-hidden flex items-center justify-center">
-                  
-                  {/* Styled SVG replacement with dark background profile */}
-                  <div className="absolute inset-0 bg-stone-950 flex flex-col items-center justify-center p-4">
-                    <Skull className="w-10 h-10 text-stone-800 group-hover:text-[#c41e1e] group-hover:scale-110 transition-all duration-500 mb-2 opacity-50" />
-                    <span className="font-mono text-[9px] text-stone-600 tracking-wider">PHOTO PLACEHOLDER</span>
-                  </div>
+                 {/* Member Photo */}
+                 <div className="relative aspect-[3/4] w-full bg-[#121212] overflow-hidden flex items-center justify-center">
 
-                  <Image
-                    src={`https://picsum.photos/seed/${member.id}/${300}/${400}`}
-                    alt={member.name}
-                    fill
-                    className="object-cover opacity-20 filter grayscale group-hover:opacity-40 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-750"
-                    referrerPolicy="no-referrer"
-                  />
+                   {/* Fallback skull (shown behind photo) */}
+                   <div className="absolute inset-0 bg-stone-950 flex flex-col items-center justify-center p-4">
+                     <Skull className="w-10 h-10 text-stone-800 mb-2 opacity-50" />
+                     <span className="font-mono text-[9px] text-stone-600 tracking-wider">NO_SIGNAL</span>
+                   </div>
 
-                  {/* Red Frame Overlay on hover */}
-                  <div className="absolute inset-2 border border-transparent group-hover:border-[#c41e1e]/40 transition-all duration-500 pointer-events-none" />
+                   <Image
+                     src={member.photo}
+                     alt={member.name}
+                     fill
+                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                     className="object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                   />
 
-                  {/* Member index stripe */}
-                  <span className="absolute top-3 left-3 font-mono text-[10px] text-stone-700 font-bold group-hover:text-[#c41e1e] transition-colors">
-                    S_0{idx + 1}
-                  </span>
-                </div>
+                   {/* Dark gradient overlay at bottom */}
+                   <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#060606]/80 to-transparent pointer-events-none" />
+
+                   {/* Red Frame Overlay on hover */}
+                   <div className="absolute inset-2 border border-transparent group-hover:border-[#c41e1e]/40 transition-all duration-500 pointer-events-none" />
+
+                   {/* Member index stripe */}
+                   <span className="absolute top-3 left-3 z-10 font-mono text-[10px] text-stone-400 font-bold">
+                     S_0{idx + 1}
+                   </span>
+                 </div>
 
                 {/* Info and Role details */}
                 <div className="p-4 bg-[#0a0a0b] border-t border-stone-900">

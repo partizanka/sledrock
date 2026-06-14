@@ -198,7 +198,7 @@ function HomeContent() {
                 </div>
                 <div>
                   <h4 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#c41e1e] flex items-center">
-                    23<span className="text-sm font-normal text-white ml-1">трека</span>
+                    30<span className="text-sm font-normal text-white ml-1">треков</span>
                   </h4>
                   <p className="font-sans text-[10px] text-stone-500 uppercase tracking-widest mt-1">Записано в студии</p>
                 </div>
@@ -251,7 +251,7 @@ function HomeContent() {
                       <p className="font-sans text-xs text-[#c41e1e] uppercase tracking-[0.2em] mt-2">СЛЕD (2026)</p>
                     </div>
                     <div className="flex justify-between items-end">
-                      <span className="font-mono text-[9px] text-stone-500">8 TRACKS</span>
+                      <span className="font-mono text-[9px] text-stone-500">10 TRACKS</span>
                       <span className="font-mono text-[9px] text-[#c41e1e] font-semibold">HQ AUDIO</span>
                     </div>
                   </div>
@@ -277,10 +277,10 @@ function HomeContent() {
                 
                 <p className="font-sans text-stone-400 text-sm leading-relaxed">
                   {lang === 'by' 
-                    ? "У другі паўнафарматны лонгплэй калектыву ўвайшлі 8 глыбокіх трэкаў, напоўненых змрочнымі таямніцамі, гісторыямі пра бегляцоў, маякі і рэквіемам аб каханні."
+                    ? "У другі паўнафарматны лонгплэй калектыву ўвайшлі 10 глыбокіх трэкаў, напоўненых змрочнымі таямніцамі, гісторыямі пра бегляцоў, маякі і рэквіемам аб каханні."
                     : lang === 'en'
-                    ? "The band's second full-length studio release features 8 heavy, melodic chronicles including 'Dreamcatcher', 'Lighthouse Keeper', and the tragic 'Sad Clown'."
-                    : "Во второй полноформатный лонгплей коллектива вошли 8 глубоких треков, наполненных мрачными тайнами, историями о беглецах, смотрителях маяков и реквиемом о любви."}
+                    ? "The band's second full-length studio release features 10 heavy, melodic chronicles including 'Dreamcatcher', 'Lighthouse Keeper', and the tragic 'Sad Clown'."
+                    : "Во второй полноформатный лонгплей коллектива вошли 10 глубоких треков, наполненных мрачными тайнами, историями о беглецах, смотрителях маяков и реквиемом о любви."}
                 </p>
 
                 {/* Direct Release Tracklist teaser snippet */}
