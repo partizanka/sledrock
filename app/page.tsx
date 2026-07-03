@@ -33,12 +33,12 @@ function HomeContent() {
         {/* Background Image Layer with vignette */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://picsum.photos/seed/sledband/1920/1080"
-            alt="СЛЕD Band Cover"
+            src="/images/hero/band-main.webp"
+            alt="СЛЕD — фото группы"
             fill
+            sizes="100vw"
             className="object-cover object-center opacity-30 transform scale-105 filter grayscale contrast-125"
             priority
-            referrerPolicy="no-referrer"
           />
           {/* Crimson glow overlay and vignette */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#060606] via-[#060606]/80 to-[#060606]/50" />
@@ -147,11 +147,11 @@ function HomeContent() {
               <div className="relative bg-[#0d0d0d] p-3 rounded-lg border border-stone-900 shadow-[0_15px_30px_rgba(0,0,0,0.8)] overflow-hidden">
                 <div className="relative aspect-video sm:aspect-square w-full">
                   <Image
-                    src="https://picsum.photos/seed/sledlive/600/600"
+                    src="/images/about/live-minsk.webp"
                     alt="СЛЕD live Минск"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover rounded filter grayscale scale-100 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
-                    referrerPolicy="no-referrer"
                   />
                   {/* Vignette */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />

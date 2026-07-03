@@ -10,17 +10,17 @@ import Image from 'next/image';
 
 interface MediaPhoto {
   id: string;
-  seed: string;
+  src: string;
   captionKey: 'photoCaption1' | 'photoCaption2' | 'photoCaption3' | 'photoCaption4' | 'photoCaption5' | 'photoCaption6';
 }
 
 const PHOTOS: MediaPhoto[] = [
-  { id: "p1", seed: "show1", captionKey: "photoCaption1" },
-  { id: "p2", seed: "drum1", captionKey: "photoCaption2" },
-  { id: "p3", seed: "violin1", captionKey: "photoCaption3" },
-  { id: "p4", seed: "stage1", captionKey: "photoCaption4" },
-  { id: "p5", seed: "guitar2", captionKey: "photoCaption5" },
-  { id: "p6", seed: "fans1", captionKey: "photoCaption6" }
+  { id: "p1", src: "/images/media/photo-1.webp", captionKey: "photoCaption1" },
+  { id: "p2", src: "/images/media/photo-2.webp", captionKey: "photoCaption2" },
+  { id: "p3", src: "/images/media/photo-3.webp", captionKey: "photoCaption3" },
+  { id: "p4", src: "/images/media/photo-4.webp", captionKey: "photoCaption4" },
+  { id: "p5", src: "/images/media/photo-5.webp", captionKey: "photoCaption5" },
+  { id: "p6", src: "/images/media/photo-6.webp", captionKey: "photoCaption6" }
 ];
 
 interface MediaVideo {
@@ -33,21 +33,21 @@ interface MediaVideo {
 const VIDEOS: MediaVideo[] = [
   { 
     id: "v1", 
-    embedId: "q6T0x6t_8pM", // actual/placeholder video
-    title: "СЛЕD — Человек с 1000 лиц (Live)", 
+    embedId: "IVM_3cReJv8", 
+    title: "СЛЕD на фестивале Солнцестояние 2025 (Пружаны)", 
     category: { ru: "Выступление", by: "Выступленне", en: "Live Performance" } 
   },
   { 
     id: "v2", 
-    embedId: "LgWn1_H9i5o", 
-    title: "СЛЕD — Призрак (Official Lyric Video)", 
-    category: { ru: "Лирик-видео", by: "Лірык-відэа", en: "Lyric Video" } 
-  },
+    embedId: "9jdCW-P3fB0", 
+    title: "СЛЕD — альбом Проклятый 2025", 
+    category: { ru: "Полный альбом", by: "Поўны альбом", en: "Full Album" } 
+  }, 
   { 
     id: "v3", 
-    embedId: "dQw4w9WgXcQ", // standard placeholder default 
-    title: "СЛЕD — Девочка-вампир (Live Behind the Scenes)", 
-    category: { ru: "Бэкстейдж", by: "Бэкстэйдж", en: "Backstage / Rehearsal" } 
+    embedId: "PNEqSbwvZfM", 
+    title: "СЛЕD — А-ктобер фест 2023 (Минск)", 
+    category: { ru: "Промо", by: "Прома", en: "Promo" } 
   }
 ];
 
@@ -195,11 +195,10 @@ function MediaContent() {
                     {/* Picture wrapper with hover details */}
                     <div className="relative aspect-square sm:aspect-[4/3] w-full bg-[#121212] overflow-hidden">
                       <Image
-                        src={`https://picsum.photos/seed/${photo.seed}/600/450`}
-                        alt="Photo SLED"
+                        src={photo.src}
+                        alt={t[photo.captionKey]}
                         fill
                         className="object-cover opacity-60 filter grayscale group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-85 transition-all duration-500"
-                        referrerPolicy="no-referrer"
                       />
 
                       {/* Hover Overlay Vignette */}
@@ -234,12 +233,11 @@ function MediaContent() {
           {/* Lightbox photo panel */}
           <div className="relative max-w-4xl max-h-[80vh] w-full h-full flex items-center justify-center pointer-events-none">
             <Image
-              src={`https://picsum.photos/seed/${PHOTOS[lightboxIndex].seed}/800/600`}
-              alt="Lightbox"
+              src={PHOTOS[lightboxIndex].src}
+              alt={t[PHOTOS[lightboxIndex].captionKey]}
               width={800}
               height={600}
               className="object-contain max-h-full rounded border border-stone-800 shadow-[0_30px_60px_rgba(0,0,0,0.9)]"
-              referrerPolicy="no-referrer"
             />
           </div>
           

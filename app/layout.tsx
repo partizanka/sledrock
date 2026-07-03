@@ -17,8 +17,42 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sledrock.by'),
   title: 'Рок-группа СЛЕD — Официальный Сайт',
   description: 'Новости, биография, состав, дискография, фото и видео белорусской хоррор-панк-рок группы СЛЕD (Минск). Пакінь свой след у вечнасці.',
+  keywords: [
+    'СЛЕD',
+    'SLED',
+    'хоррор-панк',
+    'horror punk',
+    'панк-рок',
+    'punk rock',
+    'рок',
+    'rock',
+    'Минск',
+    'Minsk',
+    'Беларусь',
+    'Belarus',
+    'рок-группа',
+    'rock band',
+    'хоррор-рок',
+    'horror rock',
+    'альтернативный рок',
+    'alternative rock',
+    'музыка',
+    'music',
+  ],
+  openGraph: {
+    title: 'Рок-группа СЛЕD — Официальный Сайт',
+    description: 'Белорусская хоррор-панк-рок группа из Минска. Пакінь свой след у вечнасці.',
+    url: 'https://sledrock.by',
+    siteName: 'СЛЕD',
+    locale: 'ru_RU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
@@ -28,4 +62,3 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     </html>
   );
 }
-
